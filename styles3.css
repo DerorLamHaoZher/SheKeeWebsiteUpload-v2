@@ -290,8 +290,8 @@ iframe{
   width: 85%;
   max-width: 500px; 
   min-width: 50px;
-  height: 70%;
-  max-height: 370px;
+  height: 100%;
+  max-height: 500px;
   min-height: fit-content; 
   border-radius: 20px;
   transition: .5s;
@@ -334,6 +334,11 @@ iframe{
 
 
 @media (max-width:1100px){
+  .screen{
+    padding: 10% 0%;
+  }
+
+
   .header{
     padding: 34px 4%;
     transition: .2s;
@@ -354,6 +359,14 @@ margin-right: 0%;
   border-bottom: 2px solid transparent;
   }
 
+  .rightbox{
+ 
+    
+    max-height: 400px;
+    
+  
+  
+  }
 
 }
 

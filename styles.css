@@ -68,8 +68,10 @@
    height: 50%;
    max-height: 100px;
    min-height: fit-content; 
-   background-color: #f0f0f0;
-   border: 2px solid #ccc;
+   background: rgb(252,0,0);
+   background: linear-gradient(145deg, rgba(252,0,0,1) 11%, rgba(255,235,95,1) 45%, rgba(242,215,0,1) 100%);
+   
+   border: 3px solid rgba(252,187,0,255);
    border-radius: 8px;
    cursor: pointer;
    display: flex;
@@ -93,8 +95,8 @@
     padding: 33px 9%;
     background: transparent;
     max-height: 150px;
-    background-color: rgba(0, 0, 0, 0.5); /* Adjust the alpha value for transparency */
-    backdrop-filter: blur(10px); /* Apply a blur effect to the background */
+    background-color: rgba(0, 0, 0, 0.5); 
+    backdrop-filter: blur(10px); 
  }
 
  .NavList{
