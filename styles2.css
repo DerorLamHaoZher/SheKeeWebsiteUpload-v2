@@ -463,7 +463,7 @@ border-bottom: 2px solid transparent;
 .NavList {
 position: absolute;
 top: 100%;
-right: -70%;
+right: -90%;
 width: 250px;
 height: 30vh;
 background-color: rgb(84,0,0);
@@ -921,6 +921,8 @@ font-size: clamp(1px, 2.5vw, 10px);
     
 
 }
+
+
 
 #preloader { 
   background: rgba(255,251,245,255) url("loader.gif") no-repeat center center;

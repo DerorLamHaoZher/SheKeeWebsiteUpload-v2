@@ -401,7 +401,7 @@ margin-right: 0%;
   .NavList {
   position: absolute;
   top: 100%;
-  right: -70%;
+  right: -85%;
   width: 250px;
   height: 30vh;
   background-color: rgb(84,0,0);
@@ -709,6 +709,21 @@ margin-right: 0%;
   }
 
 }
+
+@media (max-width:300px){
+  
+.screen{
+  padding-top: 30%;
+  padding-bottom: 30%;
+}
+.header {
+  padding: 30px 4%;
+  transition: .2s;
+}
+
+}
+
+
 
 #preloader { 
   background: rgba(255,251,245,255) url("loader.gif") no-repeat center center;

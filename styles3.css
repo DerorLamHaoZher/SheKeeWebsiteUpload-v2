@@ -388,7 +388,7 @@ margin-right: 0%;
   .NavList {
     position: absolute;
     top: 100%;
-    right: -70%;
+    right: -90%;
     width: 250px;
     height: 30vh;
     background-color: rgb(84,0,0);
@@ -577,7 +577,7 @@ margin-right: 0%;
   }
   
   .right-box-lower {
-    max-width: 170px;
+    width: 100%;
     padding: 2%;
     justify-content: right;
     align-items: right;
@@ -731,6 +731,28 @@ margin-right: 0%;
       
 
 }
+
+
+@media (max-width:300px){
+  .screen{
+    padding-top: 30%;
+    padding-bottom: 30%;
+  }
+
+  .right-box-upper {
+     width: 100%;
+   
+    ;
+   }
+ 
+ .right-box-lower {
+    width: 100%;
+    
+   }
+ 
+  
+  }
+
 
 #preloader { 
   background: rgba(255,251,245,255) url("loader.gif") no-repeat center center;
