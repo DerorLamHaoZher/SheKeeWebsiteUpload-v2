@@ -271,7 +271,8 @@ margin-right: 0%;
   justify-content: none;
   border: 2px solid black;
   border-radius: 5px;
-  background-color: #bbb;
+  background: rgb(84,0,0);
+  background: linear-gradient(120deg, rgba(84,0,0,1) 0%, rgba(210,17,24,1) 44%, rgba(117,1,10,1) 100%);
   }
   
   .NavList a{
@@ -285,7 +286,8 @@ margin-right: 0%;
   .NavList.open{
     right: 0%;
     border: 2px solid black;
-    background-color: rgba(252,187,0,255);
+    background: rgb(84,0,0);
+    background: linear-gradient(120deg, rgba(84,0,0,1) 0%, rgba(210,17,24,1) 44%, rgba(117,1,10,1) 100%);
     border-radius: 5px;
   }
  
@@ -451,7 +453,7 @@ margin-right: 0%;
 }
 
 #preloader { 
-  background: white url("loader.gif") no-repeat center center;
+  background: rgba(255,251,245,255) url("loader.gif") no-repeat center center;
   background-size: 30%; 
   height: 100vh; width: 100%; 
   position: fixed; 

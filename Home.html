@@ -169,14 +169,14 @@
                 <a class="next2" onclick="plusDivs2(1)">&#10095;</a>
 
                 <div style="  text-align: center;">
-                    <span class="dot" onclick="currentSlide2(1)"></span>
-                    <span class="dot" onclick="currentSlide2(2)"></span>
-                    <span class="dot" onclick="currentSlide2(3)"></span>
-                    <span class="dot" onclick="currentSlide2(4)"></span>
-                    <span class="dot" onclick="currentSlide2(5)"></span>
-                    <span class="dot" onclick="currentSlide2(6)"></span>
-                    <span class="dot" onclick="currentSlide2(7)"></span>
-                    <span class="dot" onclick="currentSlide2(8)"></span>
+                    <span class="dot2 active2" onclick="currentSlide2(1)"></span>
+                    <span class="dot2" onclick="currentSlide2(2)"></span>
+                    <span class="dot2" onclick="currentSlide2(3)"></span>
+                    <span class="dot2" onclick="currentSlide2(4)"></span>
+                    <span class="dot2" onclick="currentSlide2(5)"></span>
+                    <span class="dot2" onclick="currentSlide2(6)"></span>
+                    <span class="dot2" onclick="currentSlide2(7)"></span>
+                    <span class="dot2" onclick="currentSlide2(8)"></span>
                 </div>
             </div>
 
@@ -224,6 +224,8 @@ function plusDivs(n) {
 function showDivs(n) {
     var i;
     var x = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    
     if (n > x.length) {
         slideIndex = 1;
     }
@@ -233,8 +235,19 @@ function showDivs(n) {
     for (i = 0; i < x.length; i++) {
         x[i].style.display = "none";
     }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].classList.remove("active"); 
+    }
+    
     x[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].classList.add("active"); 
 }
+
+function currentSlide(n) {
+    showDivs(slideIndex = n);
+    resetAutoSlideTimer();
+}
+
 
 function currentSlide(n) {
     showDivs(slideIndex = n);
@@ -260,6 +273,7 @@ function plusDivs2(n) {
 function showDivs2(n) {
     var i;
     var x = document.getElementsByClassName("mySlides2");
+    var dots = document.getElementsByClassName("dot2"); 
     if (n > x.length) {
         slideIndex2 = 1;
     }
@@ -269,8 +283,14 @@ function showDivs2(n) {
     for (i = 0; i < x.length; i++) {
         x[i].style.display = "none";
     }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].classList.remove("active2"); 
+    }
+    
     x[slideIndex2 - 1].style.display = "block";
+    dots[slideIndex2 - 1].classList.add("active2"); 
 }
+
 
 function currentSlide2(n) {
     showDivs2(slideIndex2 = n);
