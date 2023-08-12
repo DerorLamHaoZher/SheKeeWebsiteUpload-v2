@@ -131,7 +131,6 @@ font-family: 'Josefin Sans', sans-serif;
 
 
 .slideshow-container {
-  z-index: 1;
   max-width: 800px;
   max-height: auto;
   position: relative;
