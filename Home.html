@@ -1,184 +1,777 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SheKee Restaurant - Home</title>
-    
-    <!---custom css link-->
-    <link href="styles.css" media="print" rel="stylesheet" />
-    
-    <!---boxicon link-->
-    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-    
-    <!---remixicon link-->
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet">
-    
-    <!---google font link-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
-    
-    <!-- Your JavaScript for preloaders, animations, and other functionality -->
-   <script src="https://unpkg.com/scrollreveal"></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SheKee Restaurant - Home</title>
+
+        <!---custom css link-->
+        <link rel="stylesheet" href="Astyles.css">
+        <link rel="stylesheet" href=" ">
+
+        <!---boxicon link-->
+        <link rel="stylesheet"
+            href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+        <!---remixicon link-->
+        <link
+            href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"
+            rel="stylesheet">
+        <!---google font link-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Zhi+Mang+Xing&display=swap"
+            rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap"
+            rel="stylesheet">
+<style>
+    *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+ }
+
+ .screen{
+   padding: 10% 5% 4% 5%;
+   width: 100%;
+   height: 100%;
+   min-height: 100vh;
+   min-width: 300px;
+   background: rgb(84,0,0);
+   background: linear-gradient(120deg, rgba(84,0,0,1) 0%, rgba(210,17,24,1) 44%, rgba(117,1,10,1) 100%);
+   position: relative;
+   display: grid;
+   grid-template-columns: repeat(2,1fr);
+   align-items: center;
+   gap: 2rem;
 
 
-            <script>
-        function navigateToPage() {
-            
-            window.location.href = 'https://htmlpreview.github.io/?https://raw.githubusercontent.com/DerorLamHaoZher/SheKeeWebsiteUpload-v2/main/Home.html';
-        }
 
-        var slideIndex = 1;
-var autoSlideInterval;
-
-showDivs(slideIndex);
-startAutoSlideshow();
-
-var slideIndex2 = 1;
-var autoSlideInterval2;
-
-showDivs2(slideIndex2);
-startAutoSlideshow2();
-
-function plusDivs(n) {
-    showDivs(slideIndex += n);
-    resetAutoSlideTimer();
 }
 
-function showDivs(n) {
-    var i;
-    var x = document.getElementsByClassName("mySlides");
-    var dots = document.getElementsByClassName("dot");
-    
-    if (n > x.length) {
-        slideIndex = 1;
+
+.XuJi{
+   font-family: 'Zhi Mang Xing', cursive;
+   writing-mode: vertical-lr;
+   font-size: clamp(20px, 5vw, 25px);
+   padding: 5% 8%; 
+   margin-right: 5%; 
+   text-decoration: none;
+}
+
+.Sarawak{
+   margin-top: 50%;
+   font-family: 'Zhi Mang Xing', cursive;
+   font-size: clamp(16px, 4vw, 32px);
+   color: black;
+}
+
+.GuZhaoWei{
+   font-family: 'Zhi Mang Xing', cursive;
+   font-size: clamp(12px, 3vw, 24px);
+   color: black;
+}
+
+.LaksaAndKolo{
+
+      font-family: 'Zhi Mang Xing', cursive;
+      font-size: clamp(5px, 2.5vw, 20px);
+      color: black;
+
+
+}
+
+.LaksaAndKoloEnglish{
+   margin-top: 2%;
+   font-size: clamp(1px, 1.8vw, 9px);
+   font-family: 'Josefin Sans', sans-serif;
+}
+
+.customButtonContainer {
+   width: 50%;
+   max-width: 250px; 
+   min-width: 170px;
+   height: 50%;
+   max-height: 100px;
+   min-height: fit-content; 
+   background: rgb(252,0,0);
+   background: linear-gradient(145deg, rgba(252,0,0,1) 11%, rgba(255,235,95,1) 45%, rgba(242,215,0,1) 100%);
+   border: 3px solid rgba(252,187,0,255);
+   border-radius: 8px;
+   cursor: pointer;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   text-decoration: none;
+   background-color: white;
+}
+
+
+ .header{
+    z-index: 2;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 33px 9%;
+    background: transparent;
+    max-height: 150px;
+    background-color: rgba(0, 0, 0, 0.5); 
+    backdrop-filter: blur(10px); 
+ }
+
+ .NavList{
+  z-index: 2;
+   display: flex;
+}
+
+.NavList a{
+z-index: 2;
+color: black;
+margin-left: 300px;
+font-size: 25px;
+font-weight: 600;
+border-bottom: 3px solid transparent;
+transition: all .55s ease;
+font-family: 'Josefin Sans', sans-serif;
+}
+
+.NavList a:hover{
+   border-bottom: 2px solid rgba(252,187,0,255);
+}
+
+#menu-icon{
+  display: none;
+   color: rgba(252,187,0,255);
+   font-size: 35px;
+   z-index: 10001;
+   cursor: pointer;
+}
+
+
+
+
+.slideshow-container {
+  max-width: 800px;
+  max-height: auto;
+  position: relative;
+  margin: auto;
+  padding-bottom: 5%;
+
+}
+
+.slideshow-container img{
+  max-height: 600px;
+  border: black solid 2px;
+  border-radius: 2%;
+
+  }
+
+.mySlides {
+  display: none;
+}
+
+
+.slideshow-container-2 {
+  max-width: 800px;
+  max-height: auto;
+  position: relative;
+  margin: auto;
+  padding-bottom: 5%;
+}
+
+
+.slideshow-container-2 img{
+  max-height: 600px;
+  border: black solid 2px;
+  border-radius: 2%;
+}
+
+
+
+.mySlides2 {
+  display: none;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 2%;
+  color: gray;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  background-color: black;
+
+}
+
+
+.prev2, .next2 {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 2%;
+  color: gray;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius:  3px;
+  user-select: none;
+  background-color: black;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+
+.next2 {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover, .prev2:hover, .next2:hover {
+ background: black;
+ color: rgba(252,187,0,255);
+}
+
+.text {
+  color: black;
+  font-size: 15px;
+  padding: 10px 20px;
+  position: absolute;
+  bottom: 25px;
+  width: 100%;
+  text-align: center;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.numbertext {
+  border-radius: 10%;
+  border: black solid 3px;
+  color: black;
+  font-size: 12px;
+  padding: 8px 22px;
+  position: absolute;
+  top: 0;
+  background-color: rgba(252,187,0,255);
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: rgba(252,187,0,255);
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 1s ease;
+  position: relative;
+}
+
+
+.dot2 {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: rgba(252,187,0,255);
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 1s ease;
+  position: relative;
+}
+
+.active, .dot:hover, .active2, .dot2:hover {
+ background: black;
+
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 5.0s;
+}
+
+@keyframes fade {
+  from {opacity: .0}
+  to {opacity: 1}
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  max-height: 11%;
+  background-color: rgba(252,187,0,255);
+  color: black;
+  text-align: center;
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  justify-content: space-between;
+  padding: 0 5%;
+}
+
+  p{
+ font-size: 20px;
+ font-family: 'Josefin Sans', sans-serif;
+}
+
+.small{
+  padding: 2%;
+  font-size: clamp(1px, 2vw, 20px);
+
+}
+
+
+
+
+
+
+
+@media (max-width:1500px){
+  .header{
+    padding: 17px 12%;
+    transition: .2s;
+  }
+    .NavList a{
+      margin-left: 200px;
+      font-size: 25px;
+      border-bottom: 3px solid transparent;
+      }
+
+
+}
+
+ @media (max-width:1345px){
+  .header{
+    padding: 30px 13%;
+    transition: .2s;
+
+ }
+
+
+}
+
+
+
+
+@media (max-width:1280px){
+  .header{
+    padding: 34px 10%;
+    transition: .2s;
+
+ }
+}
+
+
+
+
+@media (max-width:1100px){
+  .header{
+    padding: 34px 4%;
+    transition: .2s;
+
+ }
+
+ #menu-icon{
+margin-right: 0%;
+}
+
+
+
+ .NavList a{
+  margin-right : 50%;
+
+  font-size: 20px;
+  transition: all .55s ease;
+  border-bottom: 2px solid transparent;
+  }
+
+
+
+
+}
+
+
+
+
+
+@media (max-width:1000px){
+
+  #menu-icon{
+    display: block;
+    color: rgba(252,187,0,255);
+    font-size: 50px;
+    z-index: 10001;
+    cursor: pointer;
+
+  }
+
+
+  .NavList {
+  position: absolute;
+  top: 100%;
+  right: -85%;
+  width: 250px;
+  height: 30vh;
+  background-color: rgb(84,0,0);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px 20px;
+  transition: .5s;
+  justify-content: none;
+  border: 2px solid black;
+  border-radius: 5px;
+  background: rgb(84,0,0);
+  background: linear-gradient(120deg, rgba(84,0,0,1) 0%, rgba(210,17,24,1) 44%, rgba(117,1,10,1) 100%);
+  }
+
+  .NavList a{
+    display: block;
+    margin: 20px 0;
+    font-size: 25px;
+
+  }
+
+
+  .NavList.open{
+    right: 0%;
+    border: 2px solid black;
+    background: rgb(84,0,0);
+    background: linear-gradient(120deg, rgba(84,0,0,1) 0%, rgba(210,17,24,1) 44%, rgba(117,1,10,1) 100%);
+    border-radius: 5px;
+  }
+
+  .header{
+    padding: 30px 2%;
+    transition: .2s;
+
+ }
+
+
+.slideshow-container-2 {
+  max-width: fit-content;
+
+  margin: none;
+
+
+
+}
+
+ .screen {
+  width: 100%;
+  height: 80%;
+  min-height: 100vh;
+  background: rgb(84,0,0);
+  background: linear-gradient(120deg, rgba(84,0,0,1) 0%, rgba(210,17,24,1) 44%, rgba(117,1,10,1) 100%);
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(1,2fr);
+  align-items: center;
+  transition: 1s;
+  padding: 3% 5% 10% 5%;
+
+}
+
+.slideshow-container {
+  margin-top: 20%;
+
+
+}
+
+
+
+.slideshow-container img{
+
+  max-height: 300px;
+
+}
+
+.slideshow-container-2 img{
+
+  max-height: 300px;
+
+}
+
+
+
+}
+
+
+@media (max-width:870px){
+
+  .header{
+    padding: 30px 5%;
+    transition: .2s;
+
+ }
+
+ .slideshow-container img{
+
+  max-height: 350px;
+
+}
+
+.slideshow-container-2 img{
+
+  max-height: 350px;
+
+}
+
+
+ .customButtonContainer {
+
+  width: 100%;
+  max-width: 280px; 
+  min-width: 150px;
+  height: 50%;
+  max-height: 100px;
+  min-height: fit-content; 
+  background-color: #f0f0f0;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flexbox;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  background-color: white;
+}
+
+.XuJi{
+  font-family: 'Zhi Mang Xing', cursive;
+  writing-mode: vertical-lr;
+  font-size: clamp(20px, 20vw, 30px);
+  padding: 3% 6%; 
+  margin-right: 5%; 
+  text-decoration: none;
+}
+
+.Sarawak{
+  margin-top: 50%;
+  font-family: 'Zhi Mang Xing', cursive;
+  font-size: clamp(14px, 6vw, 32px);
+  color: black;
+}
+
+.GuZhaoWei{
+  font-family: 'Zhi Mang Xing', cursive;
+  font-size: clamp(11px, 5vw, 24px);
+  color: black;
+}
+
+.LaksaAndKolo{
+
+     font-family: 'Zhi Mang Xing', cursive;
+     font-size: clamp(5px, 4vw, 20px);
+     color: black;
+
+
+}
+
+.LaksaAndKoloEnglish{
+  margin-top: 2%;
+  font-size: clamp(1px, 2.5vw, 10px);
+}
+}
+
+@media (max-width:700px){
+
+  .screen{
+    padding: 3% 5% 12% 5%;
+  }
+
+  .slideshow-container {
+    margin-top: 30%;
+  }
+
+  .small{
+    padding: 2%;
+    font-size: clamp(10px, 3vw, 16px);
+
+  }
+
+  .small-close{
+   display: none;
+  }
+
+}
+
+@media (max-width:630px){
+
+
+}
+
+
+
+@media (max-width:570px){
+
+  .NavList.open{
+    width: 200px;
     }
-    if (n < 1) {
-        slideIndex = x.length;
+
+
+  .slideshow-container {
+    margin-top: 30%;
+
+
+  }
+
+  .slideshow-container img{
+    max-width: 400px;
+    max-height: 250px;
+  }
+
+  .slideshow-container-2 {
+    max-width: 800px;
+    max-height: auto;
+    position: relative;
+
+  }
+
+  .slideshow-container img{
+    max-width: 400px;
+    max-height: 220px;
+  }
+
+  .slideshow-container-2 img{
+    max-width: 400px;
+    max-height: 220px;
+
+  }
+
+}
+
+
+@media (max-width:420px){
+
+  .screen{
+    padding: 15% 10% 15% 10%;
+  }
+
+
+
+
+
+    .slideshow-container img{
+      max-width: 350px;
+      max-height: 250px;
     }
-    for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
+
+    .slideshow-container-2 img{
+      max-width: 350px;
+      max-height: 250px;
+
     }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].classList.remove("active"); 
+
+
+}
+
+@media (max-height:760px){
+
+  .screen{
+    padding: 16% 10% 15% 10%;
+  }
+
+
+
+
+
+    .slideshow-container img{
+      max-width: 350px;
+      max-height: 170px;
     }
-    
-    x[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].classList.add("active"); 
-}
 
-function currentSlide(n) {
-    showDivs(slideIndex = n);
-    resetAutoSlideTimer();
-}
+    .slideshow-container-2 img{
+      max-width: 350px;
+      max-height: 170px;
 
-
-function currentSlide(n) {
-    showDivs(slideIndex = n);
-    resetAutoSlideTimer();
-}
-
-function startAutoSlideshow() {
-    autoSlideInterval = setInterval(function() {
-        plusDivs(1);
-    }, 5000);
-}
-
-function resetAutoSlideTimer() {
-    clearInterval(autoSlideInterval);
-    startAutoSlideshow();
-}
-
-function plusDivs2(n) {
-    showDivs2(slideIndex2 += n);
-    resetAutoSlideTimer2();
-}
-
-function showDivs2(n) {
-    var i;
-    var x = document.getElementsByClassName("mySlides2");
-    var dots = document.getElementsByClassName("dot2"); 
-    if (n > x.length) {
-        slideIndex2 = 1;
     }
-    if (n < 1) {
-        slideIndex2 = x.length;
-    }
-    for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
-    }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].classList.remove("active2"); 
-    }
-    
-    x[slideIndex2 - 1].style.display = "block";
-    dots[slideIndex2 - 1].classList.add("active2"); 
+
+    .NavList.open {
+      width: 200px;
+      height: 250px;
+      font-size: 10px;
+  }
+
+
 }
 
 
-function currentSlide2(n) {
-    showDivs2(slideIndex2 = n);
-    resetAutoSlideTimer2();
+
+
+@media (max-height:760px),(max-width:1300px){
+  .screen{
+    padding-bottom: 20%;
+  }
+
+  .slideshow-container img{
+    max-width: 450px;
+    max-height: 300px;
+  }
+
+  .slideshow-container-2 img{
+    max-width: 450px;
+    max-height: 300px;
+
+  }
+
 }
 
-function startAutoSlideshow2() {
-    autoSlideInterval2 = setInterval(function() {
-        plusDivs2(1);
-    }, 7000);
+@media (max-width:300px){
+
+.screen{
+  padding-top: 30%;
+  padding-bottom: 30%;
+}
+.header {
+  padding: 30px 4%;
+  transition: .2s;
 }
 
-function resetAutoSlideTimer2() {
-    clearInterval(autoSlideInterval2);
-    startAutoSlideshow2();
 }
 
 
-let menu = document.querySelector('#menu-icon');
-let NavList = document.querySelector('.NavList');
 
-menu.onclick = () =>{
-
-    menu.classList.toggle('bx-x');
-    NavList.classList.toggle('open');
+#preloader { 
+  background: rgba(255,251,245,255) url("loader.gif") no-repeat center center;
+  background-size: 30%; 
+  height: 100vh; width: 100%; 
+  position: fixed; 
+  z-index: 100;
 }
-
-const sr = ScrollReveal({
-    distance: '65px',
-    duration : 2600,
-    delay: 450,
-    reset:true
-});
-
-sr.reveal('.slideshow-container',{delay:200, origin:'top'});
-sr.reveal('.slideshow-container-2',{delay:300, origin:'bottom'});
-
-        </script>
+    </style>
 
 
-
-        <script>
-            var loader = document.getElementById("preloader"); 
-            window.addEventListener("load", function(){
-                loader.style.display = "none";
-})
-        </script>
-</head>
-
-
+    </head>
 
        <body>
-
         <div id="preloader"></div>
-
         
           
-
         <section class="screen" >
-
         
     
             <div class="header">
@@ -205,43 +798,35 @@ sr.reveal('.slideshow-container-2',{delay:300, origin:'bottom'});
                 <div class="bx bx-menu" id="menu-icon"></div>
     
             </div>
-
             <!---First slide show-->
             <div class="slideshow-container"">
-
                 <div class="mySlides fade">
                     <div class="numbertext">1 / 5</div>
                     <img src="1.jpg" style="width:100%">
                     <div class="text"> </div>
                 </div>
-
                 <div class="mySlides fade">
                     <div class="numbertext">2 / 5</div>
                     <img src="2.jpg" style="width:100%">
                     <div class="text"> </div>
                 </div>
-
                 <div class="mySlides fade">
                     <div class="numbertext">3 / 5</div>
                     <img src="3.jpg" style="width:100%">
                     <div class="text"> </div>
                 </div>
-
                 <div class="mySlides fade">
                     <div class="numbertext">4 / 5</div>
                     <img src="4.jpg" style="width:100%">
                     <div class="text"> </div>
                 </div>
-
                 <div class="mySlides fade">
                     <div class="numbertext">5 / 5</div>
                     <img src="5.jpg" style="width:100%">
                     <div class="text"> </div>
                 </div>
-
                 <a class="prev" onclick="plusDivs(-1)">&#10094;</a>
                 <a class="next" onclick="plusDivs(1)">&#10095;</a>
-
                 <div style="text-align:center">
                     <span class="dot" onclick="currentSlide(1)"></span>
                     <span class="dot" onclick="currentSlide(2)"></span>
@@ -250,61 +835,50 @@ sr.reveal('.slideshow-container-2',{delay:300, origin:'bottom'});
                     <span class="dot" onclick="currentSlide(5)"></span>
                 </div>
             </div>
-
             <!-- Second Slideshow -->
-
             <div class="slideshow-container-2">
                 <div class="mySlides2 fade">
                     <div class="numbertext">1 / 8</div>
                     <img src="A.jpg" style=" width:100%">
                     <div class="text"> </div>
                 </div>
-
                 <div class="mySlides2 fade">
                     <div class="numbertext">2 / 8</div>
                     <img src="B.jpg" style="width:100%">
                     <div class="text"> </div>
                 </div>
-
                 <div class="mySlides2 fade">
                     <div class="numbertext">3 / 8</div>
                     <img src="C.jpg" style="width:100%">
                     <div class="text"> </div>
                 </div>
-
                 <div class="mySlides2 fade">
                     <div class="numbertext">4 / 8</div>
                     <img src="D.jpg" style="width:100%">
                     <div class="text"> </div>
                 </div>
-
                 <div class="mySlides2 fade">
                     <div class="numbertext">5 / 8</div>
                     <img src="E.jpg" style="width:100%">
                     <div class="text"> </div>
                 </div>
-
                 <div class="mySlides2 fade">
                     <div class="numbertext">6 / 8</div>
                     <img src="F.jpg" style="width:100%">
                     <div class="text"> </div>
                 </div>
-
                 <div class="mySlides2 fade">
                     <div class="numbertext">7 / 8</div>
                     <img src="G.jpg" style="width:100%">
                     <div class="text"> </div>
                 </div>
-
                 <div class="mySlides2 fade">
                     <div class="numbertext">8 / 8</div>
                     <img src="H.jpg" style="width:100%">
                     <div class="text"> </div>
                 </div>
-
                 <a class="prev2" onclick="plusDivs2(-1)">&#10094;</a>
                 <a class="next2" onclick="plusDivs2(1)">&#10095;</a>
-
                 <div style="  text-align: center;">
                     <span class="dot2 active2" onclick="currentSlide2(1)"></span>
                     <span class="dot2" onclick="currentSlide2(2)"></span>
@@ -316,19 +890,129 @@ sr.reveal('.slideshow-container-2',{delay:300, origin:'bottom'});
                     <span class="dot2" onclick="currentSlide2(8)"></span>
                 </div>
             </div>
-
         </section>
-
         <div class="footer">
             <p class="small">Location : Taman Impian <emas>
                     <br>/Taman Mount Austin</p>
                 <p class="small">Contact Number : 018-769 4773 / 010-3727291</p>
                 <p class="small-close">Open Time : 8am ~ 4pm</p>
-
             </div>
-
-          
+            <!-- Scoll down effect-->
+            <script src="https://unpkg.com/scrollreveal"></script>
+            <script>
+        </script>
+            <script>
+        function navigateToPage() {
             
-
+            window.location.href = 'https://htmlpreview.github.io/?https://raw.githubusercontent.com/DerorLamHaoZher/SheKeeWebsiteUpload-v2/main/Home.html';
+        }
+        var slideIndex = 1;
+var autoSlideInterval;
+showDivs(slideIndex);
+startAutoSlideshow();
+var slideIndex2 = 1;
+var autoSlideInterval2;
+showDivs2(slideIndex2);
+startAutoSlideshow2();
+function plusDivs(n) {
+    showDivs(slideIndex += n);
+    resetAutoSlideTimer();
+}
+function showDivs(n) {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    
+    if (n > x.length) {
+        slideIndex = 1;
+    }
+    if (n < 1) {
+        slideIndex = x.length;
+    }
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].classList.remove("active"); 
+    }
+    
+    x[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].classList.add("active"); 
+}
+function currentSlide(n) {
+    showDivs(slideIndex = n);
+    resetAutoSlideTimer();
+}
+function currentSlide(n) {
+    showDivs(slideIndex = n);
+    resetAutoSlideTimer();
+}
+function startAutoSlideshow() {
+    autoSlideInterval = setInterval(function() {
+        plusDivs(1);
+    }, 5000);
+}
+function resetAutoSlideTimer() {
+    clearInterval(autoSlideInterval);
+    startAutoSlideshow();
+}
+function plusDivs2(n) {
+    showDivs2(slideIndex2 += n);
+    resetAutoSlideTimer2();
+}
+function showDivs2(n) {
+    var i;
+    var x = document.getElementsByClassName("mySlides2");
+    var dots = document.getElementsByClassName("dot2"); 
+    if (n > x.length) {
+        slideIndex2 = 1;
+    }
+    if (n < 1) {
+        slideIndex2 = x.length;
+    }
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].classList.remove("active2"); 
+    }
+    
+    x[slideIndex2 - 1].style.display = "block";
+    dots[slideIndex2 - 1].classList.add("active2"); 
+}
+function currentSlide2(n) {
+    showDivs2(slideIndex2 = n);
+    resetAutoSlideTimer2();
+}
+function startAutoSlideshow2() {
+    autoSlideInterval2 = setInterval(function() {
+        plusDivs2(1);
+    }, 7000);
+}
+function resetAutoSlideTimer2() {
+    clearInterval(autoSlideInterval2);
+    startAutoSlideshow2();
+}
+let menu = document.querySelector('#menu-icon');
+let NavList = document.querySelector('.NavList');
+menu.onclick = () =>{
+    menu.classList.toggle('bx-x');
+    NavList.classList.toggle('open');
+}
+const sr = ScrollReveal({
+    distance: '65px',
+    duration : 2600,
+    delay: 450,
+    reset:true
+});
+sr.reveal('.slideshow-container',{delay:200, origin:'top'});
+sr.reveal('.slideshow-container-2',{delay:300, origin:'bottom'});
+        </script>
+        <script>
+            var loader = document.getElementById("preloader"); 
+            window.addEventListener("load", function(){
+                loader.style.display = "none";
+})
+        </script>
         </body>
     </html>
