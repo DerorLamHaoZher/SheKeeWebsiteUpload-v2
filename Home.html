@@ -898,7 +898,7 @@ margin-right: 0%;
                 <p class="small-close">Open Time : 8am ~ 4pm</p>
             </div>
             <!-- Scoll down effect-->
-            <script src="https://unpkg.com/scrollreveal"></script>
+           <script src="https://unpkg.com/scrollreveal@4.0.7/dist/scrollreveal.min.js"></script>
             <script>
         </script>
             <script>
@@ -999,20 +999,24 @@ menu.onclick = () =>{
     menu.classList.toggle('bx-x');
     NavList.classList.toggle('open');
 }
-const sr = ScrollReveal({
-    distance: '65px',
-    duration : 2600,
-    delay: 450,
-    reset:true
-});
-sr.reveal('.slideshow-container',{delay:200, origin:'top'});
-sr.reveal('.slideshow-container-2',{delay:300, origin:'bottom'});
+
         </script>
-        <script>
-            var loader = document.getElementById("preloader"); 
-            window.addEventListener("load", function(){
-                loader.style.display = "none";
-})
-        </script>
+           <script>
+    var loader = document.getElementById("preloader"); 
+    window.addEventListener("load", function(){
+        loader.style.display = "none";
+
+        const sr = ScrollReveal({
+            distance: '65px',
+            duration: 2600,
+            delay: 450,
+            reset: true
+        });
+
+        sr.reveal('.slideshow-container', { delay: 200, origin: 'top' });
+        sr.reveal('.slideshow-container-2', { delay: 300, origin: 'bottom' });
+    });
+</script>
+
         </body>
     </html>
