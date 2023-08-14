@@ -1,36 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>SheKee Restaurant - Home</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SheKee Restaurant - Home</title>
+    
+    <!---custom css link-->
+    <link href="styles.css" media="print" rel="stylesheet" />
+    
+    <!---boxicon link-->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    
+    <!---remixicon link-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet">
+    
+    <!---google font link-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+    
+    <!-- Your JavaScript for preloaders, animations, and other functionality -->
+   <script src="https://unpkg.com/scrollreveal"></script>
 
-        <!---custom css link-->
-        <link href="Astyles.css" media="print" rel="stylesheet" />
 
-        <!---boxicon link-->
-        <link rel="stylesheet"
-            href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+            <script>
+        function navigateToPage() {
+            
+            window.location.href = 'https://htmlpreview.github.io/?https://raw.githubusercontent.com/DerorLamHaoZher/SheKeeWebsiteUpload-v2/main/Home.html';
+        }
 
-        <!---remixicon link-->
-        <link
-            href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"
-            rel="stylesheet">
+        var slideIndex = 1;
+var autoSlideInterval;
 
-        <!---google font link-->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Zhi+Mang+Xing&display=swap"
-            rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap"
-            rel="stylesheet">
-        
+showDivs(slideIndex);
+startAutoSlideshow();
 
-    </head>
+var slideIndex2 = 1;
+var autoSlideInterval2;
+
+showDivs2(slideIndex2);
+startAutoSlideshow2();
+
+function plusDivs(n) {
+    showDivs(slideIndex += n);
+    resetAutoSlideTimer();
+}
+
+function showDivs(n) {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    
+    if (n > x.length) {
+        slideIndex = 1;
+    }
+    if (n < 1) {
+        slideIndex = x.length;
+    }
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].classList.remove("active"); 
+    }
+    
+    x[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].classList.add("active"); 
+}
+
+function currentSlide(n) {
+    showDivs(slideIndex = n);
+    resetAutoSlideTimer();
+}
+
+
+function currentSlide(n) {
+    showDivs(slideIndex = n);
+    resetAutoSlideTimer();
+}
+
+function startAutoSlideshow() {
+    autoSlideInterval = setInterval(function() {
+        plusDivs(1);
+    }, 5000);
+}
+
+function resetAutoSlideTimer() {
+    clearInterval(autoSlideInterval);
+    startAutoSlideshow();
+}
+
+function plusDivs2(n) {
+    showDivs2(slideIndex2 += n);
+    resetAutoSlideTimer2();
+}
+
+function showDivs2(n) {
+    var i;
+    var x = document.getElementsByClassName("mySlides2");
+    var dots = document.getElementsByClassName("dot2"); 
+    if (n > x.length) {
+        slideIndex2 = 1;
+    }
+    if (n < 1) {
+        slideIndex2 = x.length;
+    }
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].classList.remove("active2"); 
+    }
+    
+    x[slideIndex2 - 1].style.display = "block";
+    dots[slideIndex2 - 1].classList.add("active2"); 
+}
+
+
+function currentSlide2(n) {
+    showDivs2(slideIndex2 = n);
+    resetAutoSlideTimer2();
+}
+
+function startAutoSlideshow2() {
+    autoSlideInterval2 = setInterval(function() {
+        plusDivs2(1);
+    }, 7000);
+}
+
+function resetAutoSlideTimer2() {
+    clearInterval(autoSlideInterval2);
+    startAutoSlideshow2();
+}
+
+
+let menu = document.querySelector('#menu-icon');
+let NavList = document.querySelector('.NavList');
+
+menu.onclick = () =>{
+
+    menu.classList.toggle('bx-x');
+    NavList.classList.toggle('open');
+}
+
+const sr = ScrollReveal({
+    distance: '65px',
+    duration : 2600,
+    delay: 450,
+    reset:true
+});
+
+sr.reveal('.slideshow-container',{delay:200, origin:'top'});
+sr.reveal('.slideshow-container-2',{delay:300, origin:'bottom'});
+
+        </script>
+
+
+
+        <script>
+            var loader = document.getElementById("preloader"); 
+            window.addEventListener("load", function(){
+                loader.style.display = "none";
+})
+        </script>
+</head>
 
 
 
@@ -191,154 +327,8 @@
 
             </div>
 
-            <!-- Scoll down effect-->
-            <script src="https://unpkg.com/scrollreveal"></script>
-
-            <script>
-
-        </script>
-
-
-            <script>
-        function navigateToPage() {
+          
             
-            window.location.href = 'https://htmlpreview.github.io/?https://raw.githubusercontent.com/DerorLamHaoZher/SheKeeWebsiteUpload-v2/main/Home.html';
-        }
-
-        var slideIndex = 1;
-var autoSlideInterval;
-
-showDivs(slideIndex);
-startAutoSlideshow();
-
-var slideIndex2 = 1;
-var autoSlideInterval2;
-
-showDivs2(slideIndex2);
-startAutoSlideshow2();
-
-function plusDivs(n) {
-    showDivs(slideIndex += n);
-    resetAutoSlideTimer();
-}
-
-function showDivs(n) {
-    var i;
-    var x = document.getElementsByClassName("mySlides");
-    var dots = document.getElementsByClassName("dot");
-    
-    if (n > x.length) {
-        slideIndex = 1;
-    }
-    if (n < 1) {
-        slideIndex = x.length;
-    }
-    for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
-    }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].classList.remove("active"); 
-    }
-    
-    x[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].classList.add("active"); 
-}
-
-function currentSlide(n) {
-    showDivs(slideIndex = n);
-    resetAutoSlideTimer();
-}
-
-
-function currentSlide(n) {
-    showDivs(slideIndex = n);
-    resetAutoSlideTimer();
-}
-
-function startAutoSlideshow() {
-    autoSlideInterval = setInterval(function() {
-        plusDivs(1);
-    }, 5000);
-}
-
-function resetAutoSlideTimer() {
-    clearInterval(autoSlideInterval);
-    startAutoSlideshow();
-}
-
-function plusDivs2(n) {
-    showDivs2(slideIndex2 += n);
-    resetAutoSlideTimer2();
-}
-
-function showDivs2(n) {
-    var i;
-    var x = document.getElementsByClassName("mySlides2");
-    var dots = document.getElementsByClassName("dot2"); 
-    if (n > x.length) {
-        slideIndex2 = 1;
-    }
-    if (n < 1) {
-        slideIndex2 = x.length;
-    }
-    for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
-    }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].classList.remove("active2"); 
-    }
-    
-    x[slideIndex2 - 1].style.display = "block";
-    dots[slideIndex2 - 1].classList.add("active2"); 
-}
-
-
-function currentSlide2(n) {
-    showDivs2(slideIndex2 = n);
-    resetAutoSlideTimer2();
-}
-
-function startAutoSlideshow2() {
-    autoSlideInterval2 = setInterval(function() {
-        plusDivs2(1);
-    }, 7000);
-}
-
-function resetAutoSlideTimer2() {
-    clearInterval(autoSlideInterval2);
-    startAutoSlideshow2();
-}
-
-
-let menu = document.querySelector('#menu-icon');
-let NavList = document.querySelector('.NavList');
-
-menu.onclick = () =>{
-
-    menu.classList.toggle('bx-x');
-    NavList.classList.toggle('open');
-}
-
-const sr = ScrollReveal({
-    distance: '65px',
-    duration : 2600,
-    delay: 450,
-    reset:true
-});
-
-sr.reveal('.slideshow-container',{delay:200, origin:'top'});
-sr.reveal('.slideshow-container-2',{delay:300, origin:'bottom'});
-
-        </script>
-
-
-
-        <script>
-            var loader = document.getElementById("preloader"); 
-            window.addEventListener("load", function(){
-                loader.style.display = "none";
-})
-        </script>
 
         </body>
     </html>
