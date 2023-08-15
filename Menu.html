@@ -1,92 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SheKee Restaurant - Menu</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SheKee Restaurant - Menu</title>
 
-    <!---custom css link-->
-    <link rel="stylesheet" href="styles1.css">
+        <!---custom css link-->
+        <link rel="stylesheet" href="styles1.css">
 
-    <!---boxicon link-->
-    <link rel="stylesheet"
-    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+        <!---boxicon link-->
+        <link rel="stylesheet"
+            href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
 
-    <!---remixicon link-->
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet">
+        <!---remixicon link-->
+        <link
+            href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"
+            rel="stylesheet">
 
+        <!---google font link-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Zhi+Mang+Xing&display=swap"
+            rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap"
+            rel="stylesheet">
 
-      <!---google font link-->
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+    </head>
 
+    <div id="preloader"></div>
 
-</head>
+    <body>
 
-<div id="preloader"></div>
+        <div class="header">
 
-
-
-<body>
-
-    <div class="header">
-    
-        <div class="customButtonContainer fade " onclick="navigateToPage()">
-            <a class="XuJi">徐记</a>
-            <div>
-                <a class="Sarawak">砂拉越</a>
-                <a class="GuZhaoWei">古早味</a>
-                <div class="LaksaAndKolo">叻沙/哥罗面</div>
-                <div class="LaksaAndKoloEnglish">The Original Sarawak Laksa
-                    & Kolo Mee</div>
+            <div class="customButtonContainer fade " onclick="navigateToPage()">
+                <a class="XuJi">徐记</a>
+                <div>
+                    <a class="Sarawak">砂拉越</a>
+                    <a class="GuZhaoWei">古早味</a>
+                    <div class="LaksaAndKolo">叻沙/哥罗面</div>
+                    <div class="LaksaAndKoloEnglish">The Original Sarawak Laksa
+                        & Kolo Mee</div>
+                </div>
             </div>
+
+            <nav>
+                <ul class="NavList">
+                    <li class="menu fade" : rgba(252,187,0,255);"><a
+                            href="Menu.html" style="color: rgba(252,187,0,255);">Menu</a></li>
+                    <li class="drinks fade"><a href="Drinks.html">Drinks</a></li>
+                    <li class="about fade"><a href="About.html">About</a></li>
+                </ul>
+            </nav>
+
+            <div class="bx bx-menu" id="menu-icon"></div>
+
         </div>
 
-        <nav>
-            <ul class="NavList">
-                <li class="menu fade": rgba(252,187,0,255);"><a href="Menu.html" style="color: rgba(252,187,0,255);">Menu</a></li>
-                <li class="drinks fade"><a href="Drinks.html">Drinks</a></li>
-                <li class="about fade"><a href="About.html">About</a></li>
-            </ul>
-        </nav>
+        <section class="screen">
 
-        <div class="bx bx-menu" id="menu-icon"></div>
+            <div class="adjust">
+                <img src="Menu.png" alt style="height: 100%; width: 100%;">
+            </div>
 
-    </div>
+        </section>
 
+        <div class="footer">
+            <p class="small">Location : Taman Impian <emas>
+                    <br>/Taman Mount Austin</p>
+                <p class="small">Contact Number : 018-769 4773 / 010-3727291</p>
+                <p class="small-close">Open Time : 8am ~ 4pm</p>
 
+            </div>
 
-    <section class="screen">
+            <!-- Scoll down effect-->
+            <script src="https://unpkg.com/scrollreveal"></script>
 
-        <div class="adjust">
-            <img src="Menu.png" alt="" style="height: 100%; width: 100%;">
-        </div>
-        
-        
-    
-   
-
-    </section>
-
-    <div class="footer">
-        <p class="small">Location : Taman Impian <Emas>
-        <br>/Taman Mount Austin</p>
-        <p class="small">Contact Number : 018-769 4773 / 010-3727291</p>
-        <p class="small-close">Open Time : 8am ~ 4pm</p>
-
-
-    </div>
-
-
-     <!-- Scoll down effect-->
-     <script src="https://unpkg.com/scrollreveal"></script>
-
-
-    <script>
+            <script>
 
     function navigateToPage() {
             
@@ -114,14 +108,12 @@ sr.reveal('.adjust',{delay:300, origin:'left'});
 
     </script>
 
-<script>
+            <script>
     var loader = document.getElementById("preloader"); 
     window.addEventListener("load", function(){
         loader.style.display = "none";
 })
 </script>
 
-
- 
-</body>
-</html>
+        </body>
+    </html>
